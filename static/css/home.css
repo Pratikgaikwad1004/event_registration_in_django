@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: gray;
+}
+.main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+.main2 {
+  background-color: black;
+  width: 60vw;
+  height: 100%;
+  box-shadow: 0px 0px 0px 0px;
+}
+.nav {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  padding: 20px;
+}
+.nav button {
+  padding: 10px;
+  background-color: rgb(41, 41, 41);
+  color: white;
+  border: white;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.image img {
+  width: 60vw;
+  height: 50vh;
+}
+.cal {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-right: 20%;
+  margin-top: -4%;
+  color: white;
+}
+#cal-2 {
+  border-bottom: 1px solid gray;
+  background-color: gray;
+  padding: 0px 20px;
+  background: red;
+  color: white;
+  border: 2px solid red;
+}
+#cal-3 {
+  padding: 10px 20px;
+  font-size: 25px;
+  background-color: white;
+  color: black;
+  border: 2px solid white;
+}
+.head {
+  color: white;
+  margin-left: 20px;
+}
+.h1 {
+  margin-top: -5px;
+  color: rgb(214, 214, 214);
+}
+.h5 {
+  color: rgb(197, 88, 106);
+  cursor: pointer;
+}
+.h2 {
+  margin-top: 20px;
+}
+.h3 {
+  margin-top: 10px;
+  color: rgb(254, 107, 107);
+}
+.h4 {
+  margin-top: 10px;
+  color: rgb(197, 88, 106);
+}
+.info {
+  color: white;
+  margin-left: 20px;
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.info1 {
+  border-right: 1px solid white;
+  width: 70%;
+  border-color: rgb(41, 41, 41);
+}
+.disc {
+  margin-top: 20px;
+}
+.card {
+  margin-top: 50px;
+  padding: 10px;
+  width: 80%;
+  background-color: rgb(41, 41, 41);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.card-1 {
+  padding: 10px 50px;
+}
+.card-1 input {
+  padding: 5px;
+  width: 100%;
+  background-color: black;
+  border: 1px solid gray;
+  border-radius: 5px;
+  color: white;
+}
+.card-1 button{
+  color: white;
+  background-color: rgb(197, 88, 106);
+  border-color: rgb(197, 88, 106);
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+.box img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+}
+.box {
+  display: flex;
+  flex-wrap: wrap;
+}
+.box2 {
+  margin-left: 20px;
+  margin-top: 20px;
+  font-size: large;
+  font-weight: bold;
+}
+.box4 {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.btn2 {
+  margin-top: 20px;
+  padding: 8px;
+  width: 100px;
+  border-radius: 10px;
+  background-color: rgb(255, 106, 131);
+  color: white;
+  font-weight: 10px;
+  cursor: pointer;
+}
+.info2 {
+  margin-left: 40px;
+}
+.c1 img {
+  height: 60px;
+  width: 60px;
+  border-radius: 50px;
+}
+.c {
+  display: flex;
+}
+.c2 {
+  margin-left: 10px;
+}
+#c2 {
+  font-size: large;
+  font-weight: bold;
+}
+#c3 {
+  color: gray;
+}
+.c4 {
+  margin-left: 100%;
+  color: gray;
+}
+.link {
+  margin-top: 10px;
+}
+.link a {
+  text-decoration: none;
+}
+.map p {
+  margin-top: 10px;
+  color: gray;
+}
+.share-btn button {
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  background-color: rgb(41, 41, 41);
+  margin-left: 20%;
+  cursor: pointer;
+}
+.hr {
+  width: 90%;
+  margin: auto;
+}
+.footer {
+  color: gray;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+ul {
+  list-style-type: none;
+  display: flex;
+}
+.li {
+  padding: 10px;
+  cursor: pointer;
+}
+.li a {
+  text-decoration: none;
+  color: grey;
+}
+@media only screen and (max-width: 600px) {
+}
+@media only screen and (max-width: 1369px) {
+  .info2 {
+    margin-top: 20px;
+  }
+}
+@media only screen and (max-width: 1017px) {
+  .card {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 690px) {
+  .main2 {
+    width: 80vw;
+  }
+  .image img {
+    width: 80vw;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .main2 {
+    width: 100vw;
+  }
+  .image img {
+    width: 100vw;
+  }
+}
+@media only screen and (max-width: 1377px) {
+  .info {
+    color: white;
+    margin-left: 20px;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+}
+.head {
+  color: white;
+  margin-left: 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+  }

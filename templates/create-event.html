@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Event</title>
+    <link rel="stylesheet" href="{% static 'css/create-event.css' %}" />
+  </head>
+  <body>
+    <section class="section-1">
+      <form class="login-form" action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+          <div class="form-1" id="form-heading">
+            <h2>Create Event</h2>
+          </div>
+          <div class="form-1" id="user-div">
+            <label for="username">Choose Image</label>
+            <input type="file" name="file" id="username" required/>
+          </div>
+          <div class="form-1" id="pass-div">
+            <label for="password">Heading</label>
+            <input type="text" name="head" id="password" required/>
+          </div>
+          <div class="form-1" id="pass-div">
+            <label for="password">Day</label>
+            <input type="text" maxlength="2" name="day" id="password" required/>
+          </div>
+          <div class="form-1" id="pass-div">
+            <label for="password">Month</label>
+            <input type="text" maxlength="3" name="month" id="password" required/>
+          </div>
+          <div class="form-1" id="pass-div">
+            <label for="password">Start time</label>
+            <input type="text" name="stime" id="password" required/>
+          </div>
+          <div class="form-1" id="pass-div">
+            <label for="password">End time</label>
+            <input type="text" name="etime" id="password" required/>
+          </div>
+          <div class="form-1" id="pass-div">
+            <label for="password">location</label>
+            <input type="text" name="loc" id="password" required/>
+          </div>
+          
+          <div class="form-1" id="sub-div">
+            <button class="submit">Submit</button>
+          </div>
+      </form>
+    </section>
+  </body>
+</html>

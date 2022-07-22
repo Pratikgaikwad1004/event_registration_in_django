@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: gray;
+}
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.section-1 {
+  background: #000;
+  width: 50vw;
+  padding-bottom: 20px;
+  height: 100vh;
+}
+.header {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: white;
+  font-weight: bolder;
+}
+.create-event button {
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid rgb(204, 97, 115);
+    background-color: black;
+    color: rgb(204, 97, 115);
+    font-weight: bold;
+    cursor: pointer;
+}
+.tabs {
+    color: white;
+    font-size: 20px;
+    display: flex;
+    border-bottom: 1.5px solid gray;
+}
+.tab-1 {
+    padding: 10px;
+}
+#upcom {
+    color: rgb(204, 97, 115);
+    border-bottom: 2px solid rgb(204, 97, 115);
+}
+.card {
+    color: white;
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.cal {
+    border: 1px solid gray;
+    width: fit-content;
+    border-radius: 10px;
+    height: fit-content;
+}
+#cal-2 {
+    border-bottom: 1px solid gray;
+    background-color: gray;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 0px 20px;
+}
+#cal-3 {
+    padding: 10px 20px;
+    font-size: 25px;
+}
+.thumb img {
+    height: 100px;
+    width: 160px;
+    border-radius: 10px;
+}
+.thum-disc {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    flex-wrap: wrap;
+}
+.disc {
+    margin-top: 2%;
+}
+.dt {
+    color: gray;
+}
+.btn-2 {
+    padding: 6px;
+    background-color: gray;
+    border: 1px solid gray;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.footer {
+    color: gray;
+    position: absolute;
+    bottom: 0;
+  }
+  ul {
+    list-style-type: none;
+    display: flex;
+  }
+  .li {
+    padding: 10px;
+    cursor: pointer;
+  }
+  .li a {
+    text-decoration: none;
+    color: grey;
+  }
+@media screen and (max-width: 1505px) {
+    .section-1 {
+        background: #000;
+        width: 80vw;
+      }
+  }
+@media screen and (max-width: 960px) {
+    .section-1 {
+        background: #000;
+        width: 80vw;
+      }
+      .thum-disc {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        width: fit-content;
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+  }
+@media screen and (max-width: 959px) {
+    .section-1 {
+        background: #000;
+        width: 80vw;
+      }
+      .card {
+        color: white;
+        padding: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content: center;
+    }
+      .thum-disc {
+        display: flex;
+        justify-content: space-between;
+        width: fit-content;
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+    .manage {
+        width: fit-content;
+        margin-top: 20px;
+    }
+  }

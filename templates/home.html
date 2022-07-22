@@ -1,0 +1,129 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}" />
+  </head>
+  <body>
+    <section class="main" id="main">
+      <div class="main2" id="main2">
+        <div class="nav" id="nav">
+          <button class="btn1">
+            <i class="fa-solid fa-user"></i>&nbsp; {{user.first_name}}
+          </button>
+        </div>
+        <div class="image" id="image">
+          <img src="{{event.image}}" alt="" srcset="" />
+        </div>
+        <div class="cal">
+          <div class="cal-1">
+            <p class="cal-2" id="cal-2">{{event.month}}</p>
+            <p class="cal-2" id="cal-3">{{event.day}}</p>
+          </div>
+        </div>
+        <div class="head" id="head">
+          <p class="h1">
+            YOU ARE INVITED TO JOIN
+          </p>
+          <h1 class="h2">{{event.heading}}</h1>
+          <p class="h3">
+            <i class="fa-solid fa-calendar"></i>&nbsp; {{event.day}} {{event.month}}, {{event.start_time}} - {{event.end_time}} &nbsp;<i class="fa-solid fa-circle-info"></i>
+          </p>
+          <p class="h4">
+            <i class="fa-solid fa-location-pin"></i>&nbsp; {{event.location}}
+          </p>
+        </div>
+        <div class="info" id="info">
+          <div class="info1">
+            <h3>Registration</h3>
+            <p class="disc">
+              Hello! If you are intrested in this event , then please fill following details.
+            </p>
+            <div class="card">
+              <div class="card-1">
+                <label for="name">Name *</label><br>
+                <input type="text" name="name" id="name" placeholder="Your Name">
+              </div>
+              <div class="card-1">
+                <label for="name">Email *</label><br>
+                <input type="text" name="name" id="name" placeholder="you@gmail.com">
+              </div>
+              <div class="card-1">
+                <button><i class="fa-solid fa-circle-check"></i>&nbsp;Submit</button>
+              </div>
+            </div>
+          </div>
+          <div class="info2">
+            <div class="c">
+              <div class="c1">
+                <img src="{{event.image}}" alt="" srcset="" />
+              </div>
+              <div class="c3">
+                <p class="c2" id="c2">{{user_n}} ...</p>
+                <div class="c4"><i class="fa-solid fa-chevron-right"></i></div>
+                <p class="c2" id="c3">Host</p>
+              </div>
+            </div>
+            <div class="link">
+              <a href="#"
+                ><i class="fa-solid fa-envelope"></i>&nbsp; Contact the Host</a
+              >
+            </div>
+            <br /><br />
+            <hr />
+            <br /><br />
+            <h3>Location</h3>
+            <br /><br />
+            <div class="map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d121059.04360432939!2d73.79292688275116!3d18.524603553440915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf2e67461101%3A0x828d43bf9d9ee343!2sPune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1658063618785!5m2!1sen!2sin"
+                width="200"
+                height="150"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+              <p>Pune, Maharashtra, India</p>
+              <br /><br />
+              <hr />
+            </div>
+            <br /><br />
+            <div class="share-btn">
+              <button class="share">
+                <i class="fa-solid fa-arrow-up-from-bracket"></i> &nbsp;Share
+                This Event
+              </button>
+            </div>
+          </div>
+        </div>
+        <br /><br /><br />
+        <hr class="hr" />
+        <br /><br />
+        <div class="footer">
+          <div class="foot1">
+            <ul>
+              <li class="li"><i class="fa-solid fa-star"></i></li>
+              {% if request.user.is_authenticated %}
+              <li class="li"><a href="/logout/">Logout</a></li>
+              <li class="li"><a href="/profile/">Profile</a></li>
+              {% else %}
+              <li class="li"><a href="/login">Login</a></li>
+              <li class="li"><a href="/signup">Signup</a></li>
+              {% endif %}
+            </ul>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </section>
+  </body>
+</html>

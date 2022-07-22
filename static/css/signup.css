@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-image: url("../Images/login_bg.jpg");
+  background-attachment: fixed;
+}
+.login-form {
+  padding: 1% 15%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: rgb(29, 29, 29);
+  color: white;
+  font-weight: bold;
+}
+.section-1 {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  justify-content: flex-end;
+}
+.form-1 {
+  padding: 5%;
+}
+#user-div input {
+  padding: 4%;
+  width: 300px;
+  background-color: grey;
+  border-radius: 2px;
+  border-color: gray;
+}
+#pass-div input {
+  padding: 4%;
+  width: 300px;
+  background-color: grey;
+  border-radius: 2px;
+  border-color: gray;
+}
+#sub-div button {
+  padding: 4%;
+  width: 150px;
+  background-color: grey;
+  border-radius: 2px;
+  border-color: gray;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+.form-check {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.forget-pass a {
+  text-decoration: none;
+  color: white;
+}

@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}" />
+  </head>
+  <body>
+    <section class="main">
+      <section class="section-1">
+        <div class="item" id="item-1">
+            <label for="">User Name - {{user.username}}</label>
+        </div>
+        <div class="item" id="item-2">
+            <label for="">Email - {{user.email}}</label>
+        </div>
+        <div class="item" id="item-3">
+            <label for="">Name - {{user.first_name}}</label>
+        </div>
+        <hr><br>
+        <h1 class="h1">Your Events</h1>
+        {%for i in event%}
+        <div class="item" id="item-4">
+            <div class="card">
+                <div class="cal">
+                  <div class="cal-1">
+                    <p class="cal-2" id="cal-2">{{i.month}}</p>
+                    <p class="cal-2" id="cal-3">{{i.day}}</p>
+                  </div>
+                </div>
+                <div class="thum-disc">
+                  <div class="thumb">
+                    <img src="{{i.image}}" alt="" srcset="" />
+                  </div>
+                  <div class="disc">
+                    <h2>{{i.heading}}</h2>
+                    <br />
+                    <p class="dt">{{i.day}} {{i.month}}, {{i.start_time}} - {{i.end_time}} GMT+5:30</p>
+                  </div>
+                </div>
+                <div class="manage">
+                  <button class="btn-2">
+                    <i class="fa-solid fa-gear"></i>&nbsp;&nbsp;Manage
+                  </button>
+                </div>
+              </div>
+        </div>
+        {%endfor%}
+        <div class="footer">
+          <div class="foot1">
+            <ul>
+              <li class="li"><i class="fa-solid fa-star"></i></li>
+              {% if request.user.is_authenticated %}
+              <li class="li"><a href="/logout/">Logout</a></li>
+              {% else %}
+              <li class="li"><a href="/login">Login</a></li>
+              <li class="li"><a href="/signup">Signup</a></li>
+              {% endif %}
+            </ul>
+          </div>
+        </div>
+      </section>
+    </section>
+  </body>
+</html>

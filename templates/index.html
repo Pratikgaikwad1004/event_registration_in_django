@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+  </head>
+  <body>
+    <section class="main">
+      <section class="section-1">
+        <div class="header">
+          <div class="heading">
+            <h2>Event</h2>
+          </div>
+          {% if request.user.is_authenticated %}
+          <div class="create-event">
+            <button class="btn" onclick="location.href='/create/';">+ Create Event</button>
+          </div>
+          {% endif %}
+        </div>
+        <div class="tabs">
+          <div class="tab-1" id="upcom">
+            <p>Upcoming</p>
+          </div>
+          <div class="tab-1">
+            <p>Past</p>
+          </div>
+        </div>
+        {%for i in events%}
+        <div class="card">
+          <div class="cal">
+            <div class="cal-1">
+              <p class="cal-2" id="cal-2">{{i.month}}</p>
+              <p class="cal-2" id="cal-3">{{i.day}}</p>
+            </div>
+          </div>
+          <div class="thum-disc">
+            <div class="thumb">
+              <img src="{{i.image}}" alt="" srcset="" />
+            </div>
+            <div class="disc">
+              <h2>{{i.heading}}</h2>
+              <br />
+              <p class="dt">{{i.day}} {{i.month}}, {{i.start_time}} - {{i.end_time}} GMT+5:30</p>
+            </div>
+          </div>
+          <form class="manage" method="GET">
+            <a class="btn-2" onclick="location.href='/event/?id={{i.event_id}}';">
+              View Event
+            </a>
+          </form>
+        </div>
+        {%endfor%}
+        <div class="footer">
+          <div class="foot1">
+            <ul>
+              <li class="li"><i class="fa-solid fa-star"></i></li>
+              {% if request.user.is_authenticated %}
+              <li class="li"><a href="/logout">Logout</a></li>
+              <li class="li"><a href="/profile">Profile</a></li>
+              {% else %}
+              <li class="li"><a href="/login">Login</a></li>
+              <li class="li"><a href="/signup">Signup</a></li>
+              {% endif %}
+            </ul>
+          </div>
+        </div>
+      </section>
+    </section>
+  </body>
+</html>

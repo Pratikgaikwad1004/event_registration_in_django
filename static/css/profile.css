@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background-color: gray;
+  }
+  .main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .section-1 {
+    background: #000;
+    width: 50vw;
+    padding-bottom: 20px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .card {
+      color: white;
+      padding: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+  }
+  .cal {
+      border: 1px solid gray;
+      width: fit-content;
+      border-radius: 10px;
+      height: fit-content;
+  }
+  #cal-2 {
+      border-bottom: 1px solid gray;
+      background-color: gray;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      padding: 0px 20px;
+  }
+  #cal-3 {
+      padding: 10px 20px;
+      font-size: 25px;
+  }
+  .thumb img {
+      height: 100px;
+      width: 160px;
+      border-radius: 10px;
+  }
+  .thum-disc {
+      display: flex;
+      justify-content: space-between;
+      width: 60%;
+      flex-wrap: wrap;
+  }
+  .disc {
+      margin-top: 2%;
+  }
+  .dt {
+      color: gray;
+  }
+  .btn-2 {
+      padding: 6px;
+      background-color: gray;
+      border: 1px solid gray;
+      cursor: pointer;
+      border-radius: 10px;
+  }
+  .footer {
+      color: gray;
+      position: absolute;
+      bottom: 0;
+    }
+    ul {
+      list-style-type: none;
+      display: flex;
+    }
+    .li {
+      padding: 10px;
+      cursor: pointer;
+    }
+    .item {
+        padding: 20px;
+        color: white;
+        text-align: center;
+    }
+    .item label{
+        font-size: large;
+    }
+    .li a {
+      text-decoration: none;
+      color: grey;
+    }
+.h1 {
+  color: white;
+  text-align: center;
+}
+  @media screen and (max-width: 1505px) {
+      .section-1 {
+          background: #000;
+          width: 80vw;
+        }
+    }
+  @media screen and (max-width: 960px) {
+      .section-1 {
+          background: #000;
+          width: 80vw;
+        }
+        .thum-disc {
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column;
+          width: fit-content;
+          flex-wrap: wrap;
+          margin-top: 20px;
+      }
+    }
+  @media screen and (max-width: 959px) {
+      .section-1 {
+          background: #000;
+          width: 80vw;
+        }
+        .card {
+          color: white;
+          padding: 30px;
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: column;
+          align-content: center;
+      }
+        .thum-disc {
+          display: flex;
+          justify-content: space-between;
+          width: fit-content;
+          flex-wrap: wrap;
+          margin-top: 20px;
+      }
+      .manage {
+          width: fit-content;
+          margin-top: 20px;
+      }
+    }
